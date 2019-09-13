@@ -1,3 +1,7 @@
+// Title: Flipping an Image
+// Runtime: 8 ms
+// Memory: 1.2 MB
+
 class Solution {
 public:
     vector<vector<int>> flipAndInvertImage(vector<vector<int>>& A) {
@@ -10,6 +14,3 @@ public:
         return A;
     }
 };
-
-
-

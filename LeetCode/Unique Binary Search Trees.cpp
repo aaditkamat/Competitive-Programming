@@ -1,5 +1,6 @@
-#include<iostream>
-#include<string>
+// Title: Unique Binary Search Trees
+// Runtime: 0 ms
+// Memory: 831.5 KB
 
 class Solution {
 public:
@@ -23,20 +24,3 @@ public:
         return countTrees(n, values);
     }
 };
-
-int stringToInteger(string input) {
-    return stoi(input);
-}
-
-int main() {
-    string line;
-    while (getline(cin, line)) {
-        int n = stringToInteger(line);
-        
-        int ret = Solution().numTrees(n);
-
-        string out = to_string(ret);
-        cout << out << endl;
-    }
-    return 0;
-}

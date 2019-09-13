@@ -1,6 +1,6 @@
-#include<iostream>
-#include<vector>
-#include<string>
+// Title: Integer to Roman
+// Runtime: 56 ms
+// Memory: 17.2 MB
 
 class Pair {
     public:
@@ -28,20 +28,3 @@ public:
       }
     }
 };
-
-int stringToInteger(string input) {
-    return stoi(input);
-}
-
-int main() {
-    string line;
-    while (getline(cin, line)) {
-        int num = stringToInteger(line);
-        
-        string ret = Solution().intToRoman(num);
-
-        string out = (ret);
-        cout << out << endl;
-    }
-    return 0;
-}

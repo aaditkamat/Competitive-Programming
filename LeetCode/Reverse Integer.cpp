@@ -1,3 +1,7 @@
+// Title: Reverse Integer
+// Runtime: 28 ms
+// Memory: 5.1 MB
+
 #include<iostream>
 #include<string>
 #include<algorithm>
@@ -23,14 +27,3 @@ public:
         }
     }
 };
-
-int main() {
-   int first = Solution().reverse(123); 
-   cout << first << endl;
-   int second = Solution().reverse(-123);
-   cout << second << endl;
-   int third = Solution().reverse(120);
-   cout << third << endl;
-   return 0;
-}
-  

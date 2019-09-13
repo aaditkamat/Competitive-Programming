@@ -1,3 +1,7 @@
+// Title: Unique Email Addresses
+// Runtime: 24 ms
+// Memory: 1.6 MB
+
 class Solution {
 public:
     string parseEmail(string email) {
@@ -16,7 +20,7 @@ public:
     }
     int numUniqueEmails(vector<string>& emails) {
         set<string> uniqueEmails;
-        for (vector<string>::iterator it = emails.begin(); it != emails.end(); ++it)         {
+        for (vector<string>::iterator it = emails.begin(); it != emails.end(); ++it) {
             string parsedEmail = parseEmail(*it);
             uniqueEmails.insert(parsedEmail);
         }
