@@ -1,4 +1,5 @@
-def part2(lst):
+def part2():
+    lst = [int(num) for num in input().split(',')]
     for noun in range(100):
         new_lst = [x for x in lst]
         for verb in range(100):
@@ -8,8 +9,8 @@ def part2(lst):
                 return 100 * noun + verb
         
 
-def part1(lst):
-    new_lst = [num for num in lst]
+def part1():
+    lst = [int(num) for num in input().split(',')]
     for i in range(0, len(lst), 4):
         opcode = new_lst[i]
         if opcode == 1:
@@ -20,6 +21,6 @@ def part1(lst):
             break
     return new_lst[0]
 
-lst = [int(num) for num in input().split(',')]
-print(part1(lst))
-print(part2(lst))
+
+print(part1())
+print(part2())
