@@ -32,5 +32,3 @@ def part2():
             else:
                 print("1", end='')
         print()
-
-part2()
