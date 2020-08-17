@@ -1,3 +1,11 @@
+# MacOS
 .DS_Store
+
+# IDE
 .vscode/
 .idea/
+
+# Pytest
+**/.pytest_cache
+**/*.pyc
+**/__pycache__
