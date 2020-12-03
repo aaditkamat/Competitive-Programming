@@ -2,6 +2,7 @@ import argparse
 import sys
 from typing import List, Tuple
 
+
 # Part 1
 def two_sum(lst: list, total: int) -> Tuple[int, int]:
     container: set[int] = set()

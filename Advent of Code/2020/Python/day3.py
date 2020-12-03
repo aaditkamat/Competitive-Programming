@@ -1,8 +1,8 @@
 import argparse
 import sys
-
 from functools import reduce
 from typing import List, Tuple
+
 
 def count_trees(grid: List[List[str]], slopes: List[Tuple[int, int]]) -> int:
     ctrs: List[int] = []
@@ -10,12 +10,13 @@ def count_trees(grid: List[List[str]], slopes: List[Tuple[int, int]]) -> int:
         ctr: int = 0
         x, y = 0, 0
         while x < len(grid):
-            if grid[x][y] == '#':
+            if grid[x][y] == "#":
                 ctr += 1
             x += dx
             y = (y + dy) % len(grid[0])
         ctrs.append(ctr)
-    return reduce(lambda x, y: x  * y, ctrs, 1)
+    return reduce(lambda x, y: x * y, ctrs, 1)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Solve day3 of AoC 2020")
@@ -32,6 +33,6 @@ if __name__ == "__main__":
         print(f"The number of trees encountered: {num_trees}")
 
         # Part 2
-        slopes: List[Tuple[int, int]] = [(1, 1), (1, 3), (1, 5),  (1, 7), (2, 1)]
+        slopes: List[Tuple[int, int]] = [(1, 1), (1, 3), (1, 5), (1, 7), (2, 1)]
         mult_result: int = count_trees(grid, slopes)
         print(f"Multiplication of the number of trees encountered: {mult_result}")
