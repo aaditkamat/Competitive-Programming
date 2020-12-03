@@ -1,6 +1,6 @@
 import argparse
 import sys
-from typing import Tuple
+from typing import List, Tuple
 
 # Part 1
 def two_sum(lst: list, total: int) -> Tuple[int, int]:
@@ -13,7 +13,7 @@ def two_sum(lst: list, total: int) -> Tuple[int, int]:
 
 
 # Part 2
-def three_sum(lst: list, total: int) -> Tuple[int, int, int]:
+def three_sum(lst: List[int], total: int) -> Tuple[int, int, int]:
     container: set[int] = set()
     for num in lst:
         tup = two_sum(lst, total - num)
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     )
     file_name: str = sys.argv[1]
     with open(file_name) as f:
-        lst: list = list(map(int, f.read().split()))
+        lst: List[int] = list(map(int, f.read().split()))
         num1, num2 = two_sum(lst, 2020)
         print(f"Part 1: The product of {num1} and {num2} is: {num1 * num2}")
         num1, num2, num3 = three_sum(lst, 2020)
