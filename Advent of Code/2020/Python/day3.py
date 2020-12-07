@@ -23,6 +23,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "input file", metavar="FILE", help="name of input file (day3.in)"
     )
+    args: argparse.Namespace = parser.parse_args()
     file_name: str = sys.argv[1]
     with open(file_name) as f:
         grid: List[List[str]] = [list(row) for row in f.read().split()]
@@ -33,6 +34,6 @@ if __name__ == "__main__":
         print(f"The number of trees encountered: {num_trees}")
 
         # Part 2
-        slopes: List[Tuple[int, int]] = [(1, 1), (1, 3), (1, 5), (1, 7), (2, 1)]
+        slopes.extend([(1, 1), (1, 5), (1, 7), (2, 1)])
         mult_result: int = count_trees(grid, slopes)
         print(f"Multiplication of the number of trees encountered: {mult_result}")
