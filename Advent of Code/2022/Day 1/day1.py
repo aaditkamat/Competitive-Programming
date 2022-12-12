@@ -13,14 +13,16 @@ def parse(file):
 
 
 def part_1(lst):
-    print(f'The total number of calories that the elf is carrying is: {max([sum(ele) for ele in lst])}')
+    print(
+        f'The total number of calories that the elf is carrying is: {max(sum(ele) for ele in lst)}'
+    )
 
 
 def part_2(lst):
     res, num_max = 0, 3
     sums_heap = [-1 * sum(ele) for ele in lst]
     heapq.heapify(sums_heap)
-    for i in range(num_max):
+    for _ in range(num_max):
         res += -1 * heapq.heappop(sums_heap)
     print(f'The total number of calories that the elves are carrying is: {res}')
 
