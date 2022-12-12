@@ -18,7 +18,7 @@ def parse_part2(file):
 
 
 def part_1():
-    path = '/kaggle/input/advent-of-code-2022/day3.txt'
+    path = './day3.in'
 
     with open(path) as file:
         df = parse_part1(file)
@@ -33,7 +33,7 @@ def part_1():
 
 
 def part_2():
-    path = '/kaggle/input/advent-of-code-2022/day3.txt'
+    path = './day3.in'
 
     with open(path) as file:
         df = parse_part2(file)
