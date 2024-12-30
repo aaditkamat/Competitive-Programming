@@ -60,10 +60,9 @@ def solution(grid):
             lst.append(max([up(grid, i, j), down(grid, i, j), left(grid, i, j), right(grid, i, j), diagonal(grid, i, j)]))
     return max(lst)
 
-def main():
+    
+with open('Inputs/problem_11.in') as file:
     grid = []
-    for line in fileinput.input():
+    for line in file:
         grid.append([int(num) for num in line.split(' ')])
     print(solution(grid))
-
-main()
