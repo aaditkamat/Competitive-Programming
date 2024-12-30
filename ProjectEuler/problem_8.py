@@ -1,5 +1,3 @@
-import fileinput
-
 def prod(string):
     start = 1
     for char in string:
@@ -12,8 +10,9 @@ def solution(string):
         lst.append(prod(string[i: i + 13]))
     return max(lst)
 
-print("Enter a string: ")
-string = ''
-for line in fileinput.input():
-    string += line.strip()
-print(solution(string.strip()))
+
+with open('problem_8.txt') as file:
+    string = ''
+    for line in file:
+        string += line.strip()
+    print(solution(string))
