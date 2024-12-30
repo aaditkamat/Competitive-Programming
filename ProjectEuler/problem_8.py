@@ -11,7 +11,7 @@ def solution(string):
     return max(lst)
 
 
-with open('problem_8.txt') as file:
+with open('problem_8.in') as file:
     string = ''
     for line in file:
         string += line.strip()
